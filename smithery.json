@@ -1,0 +1,49 @@
+{
+  "id": "Prajwal-ak-0/youtube-mcp",
+  "name": "YouTube MCP",
+  "description": "A Model Context Protocol (MCP) server for YouTube video analysis with tools to get transcripts, summarize content, and query videos using Gemini AI.",
+  "tags": ["youtube", "video", "transcript", "summarization", "gemini", "search", "comments", "analysis"],
+  "deployment": {
+    "localOnly": false,
+    "requirements": [
+      {
+        "name": "GEMINI_API_KEY",
+        "description": "Google Gemini API key for AI operations",
+        "required": true
+      },
+      {
+        "name": "YOUTUBE_API_KEY",
+        "description": "YouTube Data API key for search and comments",
+        "required": true
+      }
+    ]
+  },
+  "examples": [
+    {
+      "name": "Get Video Transcript",
+      "description": "Extract transcript from a YouTube video",
+      "tool": "youtube/get-transcript",
+      "input": {
+        "video_id": "eHEHE2fpnWQ",
+        "languages": ["en"]
+      }
+    },
+    {
+      "name": "Query Video Content",
+      "description": "Ask a question about the video's content",
+      "tool": "youtube/query",
+      "input": {
+        "video_id": "eHEHE2fpnWQ",
+        "query": "What are AI agents according to this video?"
+      }
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Prajwal-ak-0/youtube-mcp"
+  },
+  "transportWebSocketConfig": {
+    "port": 8000,
+    "path": "/ws"
+  }
+} 
