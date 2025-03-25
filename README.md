@@ -27,7 +27,11 @@ To install youtube-mcp for Claude Desktop automatically via [Smithery](https://s
 npx -y @smithery/cli install @Prajwal-ak-0/youtube-mcp --client claude
 ```
 
-### Option 1: Direct Installation
+### Option 1: Install directly from smithery
+
+[![smithery badge](https://smithery.ai/badge/@Prajwal-ak-0/youtube-mcp)](https://smithery.ai/server/@Prajwal-ak-0/youtube-mcp)
+
+### Option 2: Local setup
 
 1. Clone the repository:
    ```bash
@@ -47,20 +51,16 @@ npx -y @smithery/cli install @Prajwal-ak-0/youtube-mcp --client claude
    GEMINI_API_KEY=your_gemini_api_key
    YOUTUBE_API_KEY=your_youtube_api_key
    ```
-
-4. Run the MCP server:
+   
+4. Run MCP Server
    ```bash
-   python main.py
+   mcp dev main.py
    ```
+   Navigate to [Stdio](http://localhost:5173)
 
-### Option 2: Using MCP CLI
+   OR
 
-1. Install the MCP CLI:
-   ```bash
-   pip install mcp
-   ```
-
-2. Create an `mcp.json` file in your project:
+6. Go cursor or windsurf configure with this json content:
    ```json
    {
      "youtube": {
@@ -77,31 +77,6 @@ npx -y @smithery/cli install @Prajwal-ak-0/youtube-mcp --client claude
      }
    }
    ```
-
-3. Start the server with MCP:
-   ```bash
-   mcp run youtube
-   ```
-
-## Using with Docker
-
-1. Build the Docker image:
-   ```bash
-   docker build -t youtube-mcp .
-   ```
-
-2. Run the container with your API keys:
-   ```bash
-   docker run -e GEMINI_API_KEY=your_gemini_api_key -e YOUTUBE_API_KEY=your_youtube_api_key youtube-mcp
-   ```
-
-## Deploying on Smithery
-
-This MCP server can be deployed on [Smithery](https://smithery.ai) for easier access:
-
-1. Add or claim your server on Smithery
-2. Click "Deploy" on the Smithery Deployments tab
-3. Provide your API keys when prompted
 
 ## Available Tools
 
