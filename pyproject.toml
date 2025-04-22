@@ -7,7 +7,7 @@ name = "youtube-mcp"
 version = "0.1.0"
 description = "YouTube MCP Server for video analysis with Gemini AI"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10" # 这一行被修改了
 license = {text = "MIT"}
 keywords = ["youtube", "mcp", "ai", "gemini", "transcript"]
 authors = [
@@ -15,9 +15,11 @@ authors = [
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
+    # "Programming Language :: Python :: 3.9", # 这一行被移除了
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    # 如果项目也兼容 3.12 或更高版本，可以添加对应的分类器，例如:
+    # "Programming Language :: Python :: 3.12",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
@@ -37,4 +39,4 @@ package-dir = {"" = "."}
 
 [tool.black]
 line-length = 88
-target-version = ["py39", "py310", "py311"]
+target-version = ["py310", "py311"] 
